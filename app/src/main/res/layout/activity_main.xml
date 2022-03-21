@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vyvital.Stayfit.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/qanelasbold"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/qanelasbold"
+        android:gravity="center"
+        android:text="@string/name"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView" />
+
+    <TextView
+        android:id="@+id/cals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/qanelasbold"
+        android:gravity="center"
+        android:text="@string/your_current_calorie_instake_is"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_goneMarginTop="14dp" />
+
+    <TextView
+        android:id="@+id/calsNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/qanelasbold"
+        android:gravity="center"
+        android:text="@string/_1234"
+        android:textColor="@color/colorPrimary"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cals" />
+
+    <TextView
+        android:id="@+id/workoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/qanelasbold"
+        android:gravity="center"
+        tools:text="Workout name"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/lay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calsNum" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calsNum"
+        app:layout_constraintVertical_bias="0.63">
+
+        <TextView
+            android:id="@+id/dayName"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:fontFamily="@font/qanelasbold"
+            android:gravity="center"
+            tools:text="Workout A"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:contentDescription="@string/next_day" />
+
+    </LinearLayout>
+
+
+    <net.grobas.view.PolygonImageView
+        android:id="@+id/polygonWorkout"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:src="@drawable/test1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:poly_border="true"
+        app:poly_border_color="@android:color/white"
+        app:poly_border_width="2dp"
+        app:poly_corner_radius="5"
+        app:poly_shadow="true"
+        app:poly_shadow_color="@android:color/black"
+        app:poly_vertices="6" />
+
+    <net.grobas.view.PolygonImageView
+        android:id="@+id/polygonFood"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:src="@drawable/food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:poly_border="true"
+        app:poly_border_color="@android:color/white"
+        app:poly_border_width="2dp"
+        app:poly_corner_radius="5"
+        app:poly_shadow="true"
+        app:poly_shadow_color="@android:color/black"
+        app:poly_vertices="6" />
+
+    <net.grobas.view.PolygonImageView
+        android:id="@+id/polygonProgress"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        android:src="@drawable/messu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:poly_border="true"
+        app:poly_border_color="@android:color/white"
+        app:poly_border_width="2dp"
+        app:poly_corner_radius="5"
+        app:poly_shadow="true"
+        app:poly_shadow_color="@android:color/black"
+        app:poly_vertices="6" />
+
+    <ImageButton
+        android:id="@+id/start"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/start"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/start_workout_button" />
+
+    <com.natasa.progressviews.CircleSegmentBar
+        android:id="@+id/segment_bar"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="5dp"
+        android:visibility="visible"
+        app:bar_width="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:progress_color="#f77630"
+        app:progress_width="10dp" />
+
+</android.support.constraint.ConstraintLayout>

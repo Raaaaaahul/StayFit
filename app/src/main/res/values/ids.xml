@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="linkedin" type="id">linked.com</item>
+    <item name="github" type="id">github.com</item>
+    <item name="banner" type="id" />
+</resources>

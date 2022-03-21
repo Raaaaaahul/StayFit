@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/weightRV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002"
+        tools:context="vyvital.Stayfit.ProgressActivity">
+
+        <com.robinhood.spark.SparkView
+            android:id="@+id/sparkView"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:padding="8dp"
+            app:spark_lineColor="@color/colorPrimary"
+            app:spark_lineWidth="4dp"
+            app:spark_scrubEnabled="true" />
+
+        <TextView
+            android:id="@+id/scrub_info_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="@string/scrub_empty"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/qanelas"
+                android:gravity="center"
+                android:text="@string/_1w"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/qanelas"
+                android:gravity="center"
+                android:text="@string/_1m"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/qanelas"
+                android:gravity="center"
+                android:text="@string/_1y"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="30dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center|top"
+            android:layout_marginEnd="44dp"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/weightRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="455dp"
+        android:layout_marginEnd="304dp"
+        android:contentDescription="@string/add_weight_fab_button"
+        android:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/scale" />
+</android.support.constraint.ConstraintLayout>
